@@ -1,7 +1,4 @@
-
-# ++++++ 
-
-# Generic. Collection.
+#  Collection.
 
 
 
@@ -369,7 +366,7 @@
                         
 
 
- <b>Example   var report = db.Where(SEARCH).Select(SELECT_NEWWORKER); </b>
+ <b>Example:   var report = db.Where(SEARCH).Select(SELECT_NEWWORKER); </b>
 
 
                        
@@ -447,6 +444,7 @@
 
 <p>(Language Integrated Query) is uniform query syntax in C# and VB.Net to save and retrieve data from different sources. It is integrated in C# or VB,Â thereby eliminating the impedance mismatch between programming languages and databases, 
 as well as providing a single querying interface for different types of data sources.</p>
+<b> s => s.age > 18; </b>
 
 -  from ~ foreach
 
@@ -490,8 +488,6 @@ as well as providing a single querying interface for different types of data sou
 
 
 
-
-<b> s => s.age > 18; </b>
 
 
 
