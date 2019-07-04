@@ -6,17 +6,17 @@
 
 
 
-static void Main(string[] args)
-    {
-        ArrayList list = new ArrayList();
-        list.Add(1);
-        list.Add(3.14);
-        list.Add("Строка");
-        list.Add(new int[] { 1,2,3});
-        foreach (object element in list)
-            Console.WriteLine(element);
-        Console.ReadKey();
-    }
+                    static void Main(string[] args)
+                        {
+                            ArrayList list = new ArrayList();
+                            list.Add(1);
+                            list.Add(3.14);
+                            list.Add("Строка");
+                            list.Add(new int[] { 1,2,3});
+                            foreach (object element in list)
+                                Console.WriteLine(element);
+                            Console.ReadKey();
+                        }
 
 
 
