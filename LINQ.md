@@ -366,10 +366,12 @@
                         
 
 
- <b>Example:   var report = db.Where(SEARCH).Select(SELECT_NEWWORKER); </b>
+ <b>Example Linq Extensions :   var report = db.Where(SEARCH).Select(SELECT_NEWWORKER); </b>
 
 
-                       
+- ToList()
+- ToArray()
+
 
                         var report = db.Where(w => w.Age >= 20)
                              .Select(w => new NewWorker(q.Name, q.Salary));
@@ -396,18 +398,16 @@
 
 
 
- <b>Example</b>
+ <b>Example Linq ( without Extensions ) </b>
 
 
 
-                        var report = from q in db
-                            where q.Age > 20
-                            select new NewWorker(q.Name, q.Salary);
+                   var report = from q in db
+                        where q.Age > 20
+                        select new NewWorker(q.Name, q.Salary);
 
                    
 
-- ToList()
-- ToArray()
 
  <b>Example with IEnumerable  </b> 
 
