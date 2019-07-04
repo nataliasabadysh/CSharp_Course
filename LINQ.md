@@ -627,11 +627,11 @@ ISequerence<T> Where (ISequerence <T> input);
 
 
 
-public static class Enumerable
-    {
-        public static IEnumerable<TSource>Where<TSource>
-            (this IEnumerable <TSource> source, Func<TSource, bool>predicate)
-    }
+                public static class Enumerable
+                    {
+                        public static IEnumerable<TSource>Where<TSource>
+                            (this IEnumerable <TSource> source, Func<TSource, bool>predicate)
+                    }
 
 
 
@@ -642,46 +642,46 @@ public static class Enumerable
 
 
 
-namespace GreekB.Linq
-{
-        static void Main(string[] arg)
-        {
-            IEnumerable<string> cities = new[] { "Kiev", "London", "Dublin" };
+                            namespace GreekB.Linq
+                            {
+                                    static void Main(string[] arg)
+                                    {
+                                        IEnumerable<string> cities = new[] { "Kiev", "London", "Dublin" };
 
-            IEnumerable<string> query =
-                cities.Filter(StringThatStartsWithL)
+                                        IEnumerable<string> query =
+                                            cities.Filter(StringThatStartsWithL)
 
-            foreach (var city in query)
-            {
-                Console.Write(city)
-            }
+                                        foreach (var city in query)
+                                        {
+                                            Console.Write(city)
+                                        }
 
-        }
-        static bool StringThatStartsWithL(string s)
-        {
-            return s.StartsWith("L")
-        }
-}
+                                    }
+                                    static bool StringThatStartsWithL(string s)
+                                    {
+                                        return s.StartsWith("L")
+                                    }
+                            }
 
-namespace Extensions
-{
-    public static class FilterExtensions
-    {
-        public static IEnumerable<T> Filter<T>(this IEnumerable<T> input, FilterExtensions<T> predicate)
-        {
-            foreach (var item in input)
-            {
-                if (predicate(item))
-                {
-                    yield return item;
-                }
+                            namespace Extensions
+                            {
+                                public static class FilterExtensions
+                                {
+                                    public static IEnumerable<T> Filter<T>(this IEnumerable<T> input, FilterExtensions<T> predicate)
+                                    {
+                                        foreach (var item in input)
+                                        {
+                                            if (predicate(item))
+                                            {
+                                                yield return item;
+                                            }
 
-            }
-        }
-    }
-    public delegate bool FilterDelegate<T>(T item);
+                                        }
+                                    }
+                                }
+                                public delegate bool FilterDelegate<T>(T item);
 
-}
+                            }
 
 
 
@@ -698,6 +698,7 @@ namespace Extensions
                                                 return item.StartWith("L");   
                                         }
                      )
+
 
 
 # or Lambdos 
