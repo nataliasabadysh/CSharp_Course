@@ -717,9 +717,9 @@ ISequerence<T> Where (ISequerence <T> input);
 
 // params when we  want to add 
 
-    Func<int, int> square = x => x * x;
-    Func<int, int, int> Add = (x, y) => x + y;
-    Console.Write(square(3)); // 9
+                            Func<int, int> square = x => x * x;
+                            Func<int, int, int> Add = (x, y) => x + y;
+                            Console.Write(square(3)); // 9
 
 
 
